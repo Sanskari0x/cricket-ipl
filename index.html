@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IPL Cricket League</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🏏 IPL Cricket League</h1>
+
+<div id="menu">
+  <h2>Select Your Team</h2>
+  <button onclick="selectTeam('Mumbai')">Mumbai</button>
+  <button onclick="selectTeam('Chennai')">Chennai</button>
+  <button onclick="selectTeam('Bangalore')">Bangalore</button>
+  <button onclick="selectTeam('Kolkata')">Kolkata</button>
+
+  <div id="career"></div>
+</div>
+
+<div id="tutorial" class="panel"></div>
+
+<div id="game" style="display:none;">
+  <div class="hud">
+    <div class="teamBox" id="teamName"></div>
+    <div class="scoreBox">Runs <span id="score">0</span></div>
+    <div class="scoreBox">Balls <span id="balls">0</span>/6</div>
+    <div class="scoreBox">Wkts <span id="wickets">0</span></div>
+  </div>
+
+  <canvas id="pitch" width="500" height="220"></canvas>
+  <button onclick="startMatch()">Start Match</button>
+</div>
+
+<div id="league" style="display:none;">
+  <h2>🏆 League Result</h2>
+  <p id="result"></p>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
